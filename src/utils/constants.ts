@@ -1,0 +1,8 @@
+export const APP_NAME = 'Lions Club of Colombo 4';
+export const APP_TITLE = 'Member Directory';
+export const APP_DESCRIPTION = "Meet the members, leaders and dedicated individuals who make our club's service possible.";
+export const DEFAULT_AVATAR_FALLBACK = '/placeholder-avatar.svg';
+export const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
+export const ALLOWED_IMAGE_TYPES = ['image/jpeg', 'image/png', 'image/webp'];
+export const STORAGE_BUCKET = 'member-photos';
+export const UPCOMING_BIRTHDAY_DAYS = 30;

@@ -22,7 +22,7 @@ export const MemberCard: React.FC<MemberCardProps> = ({ member }) => {
           <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           
           {member.category?.name && (
-            <div className="absolute top-3 right-3">
+            <div className="absolute bottom-3 right-3 opacity-85 hover:opacity-100 transition-opacity">
               <span className="inline-block px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-primary bg-accent rounded-full shadow-sm">
                 {member.category.name}
               </span>

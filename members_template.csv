@@ -1,0 +1,2 @@
+first_name,last_name,profile_photo_url,designation,category_id,date_of_birth,phone,whatsapp,email,address,profession,joined_date,membership_id,biography,linkedin_url,facebook_url,instagram_url,display_order,is_active,show_phone,show_email,show_address,show_whatsapp
+John,Doe,,President,1,1980-01-01,+94771234567,+94771234567,john@example.com,"123 Main St, Colombo",Engineer,2020-01-01,L-12345,Lorem ipsum.,,,,1,TRUE,TRUE,TRUE,TRUE,TRUE

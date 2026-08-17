@@ -10,12 +10,11 @@ import AdminMembers from '@/pages/admin/AdminMembers';
 import AdminMemberEdit from '@/pages/admin/AdminMemberEdit';
 import AdminCategories from '@/pages/admin/AdminCategories';
 
-// Placeholders for public pages
-const HomePage = () => <div className="p-8">Home Page Placeholder</div>;
-const MemberProfilePage = () => <div className="p-8">Member Profile Placeholder</div>;
-const BirthdaysPage = () => <div className="p-8">Birthdays Placeholder</div>;
-const AboutPage = () => <div className="p-8">About Placeholder</div>;
-const LoginPage = () => <div className="p-8">Login Placeholder</div>;
+import { HomePage } from '@/pages/HomePage';
+import { MemberProfilePage } from '@/pages/MemberProfilePage';
+import { BirthdaysPage } from '@/pages/BirthdaysPage';
+import { AboutPage } from '@/pages/AboutPage';
+import { LoginPage } from '@/pages/LoginPage';
 
 const AdminLayout = () => {
   return (

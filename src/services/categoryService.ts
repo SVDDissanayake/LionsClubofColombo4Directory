@@ -1,68 +1,69 @@
-import { supabase } from '@/lib/supabase';
 import type { Category, CategoryFormData } from '@/types/database';
+import categoriesData from '@/data/categories.json';
+
+// In-memory store initialized from JSON
+let localCategories: Category[] = [...categoriesData] as Category[];
 
 export const categoryService = {
   /**
    * Fetches active categories ordered by display_order
    */
   async fetchActiveCategories() {
-    const { data, error } = await supabase
-      .from('categories')
-      .select('*')
-      .eq('is_active', true)
-      .order('display_order', { ascending: true });
+    const data = localCategories
+      .filter(c => c.is_active)
+      .sort((a, b) => a.display_order - b.display_order);
 
-    return { data: data as Category[], error };
+    return { data, error: null as Error | null };
   },
 
   /**
    * Admin: fetches all categories
    */
   async fetchAllCategories() {
-    const { data, error } = await supabase
-      .from('categories')
-      .select('*')
-      .order('display_order', { ascending: true });
-
-    return { data: data as Category[], error };
+    const data = [...localCategories].sort((a, b) => a.display_order - b.display_order);
+    return { data, error: null as Error | null };
   },
 
   /**
-   * Creates a new category
+   * Creates a new category (in-memory only for local file structure)
    */
   async createCategory(data: CategoryFormData) {
-    const { data: result, error } = await supabase
-      .from('categories')
-      .insert([data])
-      .select()
-      .single();
-
-    return { data: result, error };
+    const newCategory: Category = {
+      ...data,
+      id: Date.now().toString(),
+      description: data.description || null,
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+    };
+    
+    localCategories.push(newCategory);
+    console.warn("Category created in memory. Update src/data/categories.json to persist.");
+    return { data: newCategory, error: null as Error | null };
   },
 
   /**
-   * Updates a category
+   * Updates a category (in-memory only)
    */
   async updateCategory(id: string, data: Partial<CategoryFormData>) {
-    const { data: result, error } = await supabase
-      .from('categories')
-      .update(data)
-      .eq('id', id)
-      .select()
-      .single();
+    const index = localCategories.findIndex(c => c.id === id);
+    if (index === -1) return { data: null, error: new Error('Not found') };
 
-    return { data: result, error };
+    localCategories[index] = {
+      ...localCategories[index],
+      ...data,
+      updated_at: new Date().toISOString()
+    };
+    
+    console.warn("Category updated in memory. Update src/data/categories.json to persist.");
+    return { data: localCategories[index], error: null as Error | null };
   },
 
   /**
-   * Deletes a category
+   * Deletes a category (in-memory only)
    */
   async deleteCategory(id: string) {
-    const { error } = await supabase
-      .from('categories')
-      .delete()
-      .eq('id', id);
-
-    return { error };
+    localCategories = localCategories.filter(c => c.id !== id);
+    console.warn("Category deleted in memory. Update src/data/categories.json to persist.");
+    return { error: null as Error | null };
   }
 };

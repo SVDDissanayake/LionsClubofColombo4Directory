@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { APP_NAME } from '@/utils/constants';
+import { APP_NAME, CLUB_LOGO_PATH, DISTRICT_LOGO_PATH } from '@/utils/constants';
 import { useAuth } from '@/contexts/AuthContext';
 
 export const Navbar: React.FC = () => {
@@ -16,8 +16,9 @@ export const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo and Title */}
           <Link to="/" className="flex items-center space-x-3" onClick={closeMenu}>
-            <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-primary font-bold text-xl">
-              L
+            <div className="flex items-center space-x-2">
+              <img src={CLUB_LOGO_PATH} alt="Club Logo" className="w-10 h-10 object-contain" />
+              <img src={DISTRICT_LOGO_PATH} alt="District Logo" className="w-10 h-10 object-contain hidden sm:block" />
             </div>
             <div>
               <h1 className="font-heading font-bold text-lg leading-tight tracking-wide">{APP_NAME}</h1>

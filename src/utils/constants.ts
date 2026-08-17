@@ -6,5 +6,5 @@ export const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 export const ALLOWED_IMAGE_TYPES = ['image/jpeg', 'image/png', 'image/webp'];
 export const STORAGE_BUCKET = 'member-photos';
 export const UPCOMING_BIRTHDAY_DAYS = 30;
-export const CLUB_LOGO_PATH = '/images/club-logo.svg';
-export const DISTRICT_LOGO_PATH = '/images/district-logo.svg';
+export const CLUB_LOGO_PATH = '/images/club-logo.png';
+export const DISTRICT_LOGO_PATH = '/images/district-logo.png';

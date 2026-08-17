@@ -29,7 +29,7 @@ export const Navbar: React.FC = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-gray-200 hover:text-accent transition-colors font-medium text-sm uppercase tracking-wider">Home</Link>
-            <Link to="/#directory" className="text-gray-200 hover:text-accent transition-colors font-medium text-sm uppercase tracking-wider">Directory</Link>
+            <Link to="/directory" className="text-gray-200 hover:text-accent transition-colors font-medium text-sm uppercase tracking-wider">Directory</Link>
             <Link to="/birthdays" className="text-gray-200 hover:text-accent transition-colors font-medium text-sm uppercase tracking-wider">Birthdays</Link>
             <Link to="/about" className="text-gray-200 hover:text-accent transition-colors font-medium text-sm uppercase tracking-wider">About</Link>
             {session && (
@@ -63,7 +63,7 @@ export const Navbar: React.FC = () => {
       <div className={`md:hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
         <div className="px-4 pt-2 pb-4 space-y-1 bg-primary border-t border-primary-light">
           <Link to="/" onClick={closeMenu} className="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-accent hover:bg-primary-dark">Home</Link>
-          <Link to="/#directory" onClick={closeMenu} className="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-accent hover:bg-primary-dark">Directory</Link>
+          <Link to="/directory" onClick={closeMenu} className="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-accent hover:bg-primary-dark">Directory</Link>
           <Link to="/birthdays" onClick={closeMenu} className="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-accent hover:bg-primary-dark">Birthdays</Link>
           <Link to="/about" onClick={closeMenu} className="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-accent hover:bg-primary-dark">About</Link>
           {session ? (

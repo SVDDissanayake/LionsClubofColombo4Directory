@@ -11,6 +11,7 @@ import AdminMemberEdit from '@/pages/admin/AdminMemberEdit';
 import AdminCategories from '@/pages/admin/AdminCategories';
 
 import { HomePage } from '@/pages/HomePage';
+import { DirectoryPage } from '@/pages/DirectoryPage';
 import { MemberProfilePage } from '@/pages/MemberProfilePage';
 import { BirthdaysPage } from '@/pages/BirthdaysPage';
 import { AboutPage } from '@/pages/AboutPage';
@@ -36,6 +37,7 @@ function App() {
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<PageLayout><HomePage /></PageLayout>} />
+          <Route path="/directory" element={<PageLayout><DirectoryPage /></PageLayout>} />
           <Route path="/member/:slug" element={<PageLayout><MemberProfilePage /></PageLayout>} />
           <Route path="/birthdays" element={<PageLayout><BirthdaysPage /></PageLayout>} />
           <Route path="/about" element={<PageLayout><AboutPage /></PageLayout>} />

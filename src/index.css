@@ -208,3 +208,29 @@
 .view-transition {
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* ─── Homepage Utilities ─── */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Tabular numbers for counter animation */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}

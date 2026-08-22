@@ -61,7 +61,7 @@ export const MemberCard: React.FC<MemberCardProps> = ({ member, index = 0, viewM
           )}
           {member.whatsapp && (
             <span
-              onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(`https://wa.me/${member.whatsapp.replace(/[^0-9]/g, '')}`); }}
+              onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(`https://wa.me/${member.whatsapp!.replace(/[^0-9]/g, '')}`); }}
               className="p-2 rounded-full bg-green-100 text-green-600 hover:bg-green-200 transition-colors cursor-pointer"
               title="WhatsApp"
             >
@@ -131,7 +131,7 @@ export const MemberCard: React.FC<MemberCardProps> = ({ member, index = 0, viewM
               )}
               {member.whatsapp && (
                 <button
-                  onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(`https://wa.me/${member.whatsapp.replace(/[^0-9]/g, '')}`); }}
+                  onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(`https://wa.me/${member.whatsapp!.replace(/[^0-9]/g, '')}`); }}
                   className="p-2.5 rounded-full glass text-green-600 hover:bg-green-500 hover:text-white transition-all duration-200 shadow-lg"
                   title="WhatsApp"
                 >

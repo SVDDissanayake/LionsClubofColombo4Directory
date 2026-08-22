@@ -259,12 +259,10 @@ export const getInvolvedCards = [
 
 // ─── Member Spotlight ────────────────────────────────────────
 export const memberSpotlight = {
-  // Uses the first member from members.json by default
-  // Override with specific member data if needed:
-  name: 'Leo Lion Manish Perera',
-  position: 'Vice President',
+  name: 'Lion N. Janarthan MJF',
+  position: 'President & Leo Advisor',
   quote: 'Service is not just something we do. It is the difference we choose to make every single day for our community and the people who need us most.',
-  image: '/images/members/manish.jpeg',
+  image: null,
   ctaText: 'Meet Our Members',
   ctaHref: '/directory',
 };

@@ -55,7 +55,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ value, onChange, matchCoun
           className={`block w-full pl-13 pr-28 py-4 rounded-2xl leading-5 placeholder-gray-400 focus:outline-none bg-transparent text-text transition-all ${
             isHero ? 'text-base' : 'text-sm'
           }`}
-          placeholder="Search members by name, designation, or profession..."
+          placeholder="Search members by name or designation..."
           value={value}
           onChange={(e) => onChange(e.target.value)}
         />

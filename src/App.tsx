@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
+import { HashRouter, Routes, Route, Outlet } from 'react-router-dom';
 import { AuthProvider } from '@/contexts/AuthContext';
 import { PageLayout } from '@/components/layout/PageLayout';
 import ProtectedRoute from '@/components/admin/ProtectedRoute';
@@ -33,7 +33,7 @@ const AdminLayout = () => {
 function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<PageLayout><HomePage /></PageLayout>} />
@@ -56,7 +56,7 @@ function App() {
             <Route path="categories" element={<AdminCategories />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </AuthProvider>
   );
 }

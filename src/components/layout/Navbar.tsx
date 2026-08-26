@@ -85,7 +85,7 @@ export const Navbar: React.FC = () => {
                   isScrolled ? 'text-[10px] opacity-80' : 'text-xs opacity-90'
                 }`}
               >
-                District 306 C2
+                District 306 D1
               </p>
             </div>
           </Link>

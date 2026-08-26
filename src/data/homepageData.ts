@@ -17,7 +17,7 @@ export const siteImages = {
 
 // ─── Hero Section ────────────────────────────────────────────
 export const heroContent = {
-  eyebrow: 'LIONS CLUB OF COLOMBO 4 • DISTRICT 306 C2',
+  eyebrow: 'LIONS CLUB OF COLOMBO 4 • DISTRICT 306 D1',
   title: 'Serving With Purpose.',
   titleHighlight: 'Creating Lasting Impact.',
   description:
@@ -317,7 +317,7 @@ export const finalCtaContent = {
 // ─── Footer ──────────────────────────────────────────────────
 export const footerContent = {
   clubName: 'Lions Club of Colombo 4',
-  district: 'Lions Clubs International • District 306 C2',
+  district: 'Lions Clubs International • District 306 D1',
   motto: '"We Serve"',
   explore: [
     { label: 'Home', href: '/' },

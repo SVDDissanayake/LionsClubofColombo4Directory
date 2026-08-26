@@ -62,7 +62,7 @@ export const LionsConnection: React.FC = () => {
                   <div className="w-px h-24 bg-border" />
                   <img
                     src={siteImages.districtLogo}
-                    alt="Lions District 306 C2 Logo"
+                    alt="Lions District 306 D1 Logo"
                     className="w-28 h-28 md:w-36 md:h-36 object-contain"
                     loading="lazy"
                   />

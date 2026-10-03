@@ -1,0 +1,42 @@
+[
+  {
+    "id": "project-community-eye-care-program",
+    "title": "Community Eye Care Program",
+    "category": "Vision",
+    "description": "Free eye screenings and spectacle distribution for over 500 community members in underserved areas of Colombo.",
+    "date": "2025",
+    "image": "/images/projects/impact.jpg",
+    "impact": "500+ people screened",
+    "featured": true
+  },
+  {
+    "id": "project-school-supplies-distribution",
+    "title": "School Supplies Distribution",
+    "category": "Education",
+    "description": "Providing school bags, stationery and learning materials to children in rural schools.",
+    "date": "2025",
+    "image": "/images/projects/gallery-education.jpg",
+    "impact": "200+ children supported",
+    "featured": false
+  },
+  {
+    "id": "project-beach-cleanup-tree-planting",
+    "title": "Beach Cleanup & Tree Planting",
+    "category": "Environment",
+    "description": "Environmental conservation drive along Colombo's coastline with tree planting and beach cleanup activities.",
+    "date": "2024",
+    "image": "/images/projects/gallery-environment.jpg",
+    "impact": "1000+ trees planted",
+    "featured": false
+  },
+  {
+    "id": "project-free-health-camp",
+    "title": "Free Health Camp",
+    "category": "Health",
+    "description": "Comprehensive medical health camp offering free checkups, blood pressure monitoring and health counseling.",
+    "date": "2024",
+    "image": "/images/projects/gallery-health.jpg",
+    "impact": "300+ patients treated",
+    "featured": false
+  }
+]

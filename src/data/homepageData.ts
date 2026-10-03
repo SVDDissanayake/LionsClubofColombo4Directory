@@ -22,8 +22,8 @@ export const heroContent = {
   titleHighlight: 'Creating Lasting Impact.',
   description:
     'Together, we serve our community, empower people and create meaningful change across Colombo and beyond.',
-  primaryCta: { text: 'Explore Our Impact', href: '#impact' },
-  secondaryCta: { text: 'Join Us', href: '#get-involved' },
+  primaryCta: { text: 'Explore Our Projects', href: '#/projects' },
+  secondaryCta: { text: 'Contact Us', href: '#/contact' },
 };
 
 // ─── Impact Statistics ───────────────────────────────────────
@@ -127,49 +127,9 @@ export const serviceAreas = [
   },
 ];
 
-// ─── Featured Projects ───────────────────────────────────────
-export const featuredProjects = [
-  {
-    title: 'Community Eye Care Program',
-    category: 'Vision',
-    description: 'Free eye screenings and spectacle distribution for over 500 community members in underserved areas of Colombo.',
-    date: '2025',
-    image: '/images/homepage/impact.jpg',
-    impact: '500+ people screened',
-    featured: true,
-  },
-  {
-    title: 'School Supplies Distribution',
-    category: 'Education',
-    description: 'Providing school bags, stationery and learning materials to children in rural schools.',
-    date: '2025',
-    image: '/images/homepage/gallery-education.jpg',
-    impact: '200+ children supported',
-    featured: false,
-  },
-  {
-    title: 'Beach Cleanup & Tree Planting',
-    category: 'Environment',
-    description: 'Environmental conservation drive along Colombo\'s coastline with tree planting and beach cleanup activities.',
-    date: '2024',
-    image: '/images/homepage/gallery-environment.jpg',
-    impact: '1000+ trees planted',
-    featured: false,
-  },
-  {
-    title: 'Free Health Camp',
-    category: 'Health',
-    description: 'Comprehensive medical health camp offering free checkups, blood pressure monitoring and health counseling.',
-    date: '2024',
-    image: '/images/homepage/gallery-health.jpg',
-    impact: '300+ patients treated',
-    featured: false,
-  },
-];
-
 // ─── Impact Section ──────────────────────────────────────────
 export const impactSectionContent = {
-  eyebrow: 'OUR IMPACT',
+  eyebrow: 'PROJECTS',
   title: 'Service You Can See.',
   titleHighlight: 'Impact You Can Measure.',
   description:
@@ -309,8 +269,8 @@ export const newsletterContent = {
 // ─── Final CTA ───────────────────────────────────────────────
 export const finalCtaContent = {
   title: 'Together, We Can Serve More.',
-  description: 'Every meaningful change begins with people willing to make a difference. Join us in creating a better tomorrow for our community.',
-  primaryCta: { text: 'Join Us', href: '#get-involved' },
+  description: 'Every meaningful change begins with people willing to make a difference. Connect with us to learn more about our community initiatives and how we can support your goals.',
+  primaryCta: { text: 'Contact Us', href: '#/contact' },
   secondaryCta: { text: 'Support Our Work', href: '#' },
 };
 
@@ -325,7 +285,7 @@ export const footerContent = {
     { label: 'Directory', href: '/directory' },
     { label: 'Birthdays', href: '/birthdays' },
     { label: 'Gallery', href: '#gallery' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Contact', href: '/contact' },
   ],
   getInvolved: [
     { label: 'Become a Member', href: '#' },
@@ -349,9 +309,8 @@ export const footerContent = {
 export const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
-  { label: 'Our Impact', href: '#impact' },
+  { label: 'Projects', href: '/projects' },
   { label: 'Directory', href: '/directory' },
   { label: 'Events', href: '#events' },
   { label: 'Gallery', href: '#gallery' },
-  { label: 'Contact', href: '#contact' },
 ];

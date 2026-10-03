@@ -1,16 +1,23 @@
-import React from 'react';
-import { getInvolvedCards } from '@/data/homepageData';
-import { ScrollReveal } from './ScrollReveal';
+import React from "react";
+import { getInvolvedCards } from "@/data/homepageData";
+import { ScrollReveal } from "./ScrollReveal";
 
 export const GetInvolved: React.FC = () => {
   return (
-    <section id="get-involved" className="py-20 md:py-28 bg-primary relative overflow-hidden">
+    <section
+      id="get-involved"
+      className="py-20 md:py-28 bg-primary relative overflow-hidden"
+    >
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-[0.04]">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',
-          backgroundSize: '32px 32px',
-        }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
+            backgroundSize: "32px 32px",
+          }}
+        />
       </div>
       <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-72 h-72 bg-accent/5 rounded-full blur-3xl" />
@@ -26,7 +33,9 @@ export const GetInvolved: React.FC = () => {
               Get Involved
             </h2>
             <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-              There are many ways to join our mission and contribute to creating meaningful change.
+              We would be glad to hear from you. Reach out to the Lions Club of
+              Colombo 4 to learn more about our initiatives and how we can
+              support your community goals.
             </p>
           </div>
         </ScrollReveal>
@@ -37,8 +46,18 @@ export const GetInvolved: React.FC = () => {
             <ScrollReveal key={i} delay={i * 150}>
               <div className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 h-full flex flex-col">
                 <div className="w-16 h-16 mx-auto rounded-2xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors duration-300">
-                  <svg className="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={card.icon} />
+                  <svg
+                    className="w-8 h-8 text-accent"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d={card.icon}
+                    />
                   </svg>
                 </div>
 

@@ -1,10 +1,21 @@
-import React from 'react';
-import { featuredProjects } from '@/data/homepageData';
-import { ScrollReveal } from './ScrollReveal';
+import React, { useEffect, useState } from "react";
+import { projectService, type Project } from "@/services/projectService";
+import { ScrollReveal } from "./ScrollReveal";
 
 export const FeaturedProjects: React.FC = () => {
-  const featured = featuredProjects.find((p) => p.featured);
-  const others = featuredProjects.filter((p) => !p.featured).slice(0, 3);
+  const [projects, setProjects] = useState<Project[]>([]);
+
+  useEffect(() => {
+    const loadProjects = async () => {
+      const { data } = await projectService.getProjects();
+      setProjects(data ?? []);
+    };
+
+    loadProjects();
+  }, []);
+
+  const featured = projects.find((p) => p.featured);
+  const others = projects.filter((p) => !p.featured).slice(0, 3);
 
   return (
     <section className="py-20 md:py-28 bg-background">
@@ -19,7 +30,8 @@ export const FeaturedProjects: React.FC = () => {
               Featured Projects
             </h2>
             <p className="text-text-muted text-base md:text-lg leading-relaxed">
-              Explore the projects that are making a real difference in our community.
+              Explore the projects that are making a real difference in our
+              community.
             </p>
           </div>
         </ScrollReveal>
@@ -48,8 +60,12 @@ export const FeaturedProjects: React.FC = () => {
                     {featured.description}
                   </p>
                   <div className="flex items-center justify-between">
-                    <span className="text-accent font-bold text-sm">{featured.impact}</span>
-                    <span className="text-gray-400 text-sm">{featured.date}</span>
+                    <span className="text-accent font-bold text-sm">
+                      {featured.impact}
+                    </span>
+                    <span className="text-gray-400 text-sm">
+                      {featured.date}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -74,7 +90,9 @@ export const FeaturedProjects: React.FC = () => {
                       <span className="px-2.5 py-0.5 bg-primary/5 text-primary text-xs font-bold rounded-full uppercase tracking-wider">
                         {project.category}
                       </span>
-                      <span className="text-text-muted text-xs">{project.date}</span>
+                      <span className="text-text-muted text-xs">
+                        {project.date}
+                      </span>
                     </div>
                     <h3 className="font-heading text-lg font-bold text-text mb-2 group-hover:text-primary transition-colors">
                       {project.title}
@@ -82,7 +100,9 @@ export const FeaturedProjects: React.FC = () => {
                     <p className="text-text-muted text-sm leading-relaxed line-clamp-2 mb-3">
                       {project.description}
                     </p>
-                    <span className="text-accent font-bold text-xs">{project.impact}</span>
+                    <span className="text-accent font-bold text-xs">
+                      {project.impact}
+                    </span>
                   </div>
                 </div>
               </ScrollReveal>
@@ -94,12 +114,22 @@ export const FeaturedProjects: React.FC = () => {
         <ScrollReveal delay={400}>
           <div className="text-center mt-12">
             <a
-              href="#"
+              href="#/projects"
               className="inline-flex items-center px-7 py-3.5 border-2 border-primary text-primary font-bold rounded-full hover:bg-primary hover:text-white transition-all duration-300 text-sm"
             >
               View All Projects
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              <svg
+                className="w-4 h-4 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
               </svg>
             </a>
           </div>
